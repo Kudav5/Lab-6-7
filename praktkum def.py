@@ -1,30 +1,39 @@
 # Tugas Praktikum
-'''
-buat program dengan  menampilkan daftar nilai mahasiswa dengan ketentuan:
-tambah()
-tampilkan()
-hapus(nama)
-ubah(nama)
-'''
-def tambah(x,y):
-    return x+y
-def tampilkan(x,y):
-    return x,y
-def hapus(nama, nilai):
-    return
-def ubah(nama):
-    return
-# buat flowcart serta penjelasan
 
-print(tambah(2,1))
-#===================================================================
+data = {}
+def tambah(nama, nilai):                # untuk menambah data
+    a = data[nama] = nilai
+def tampilkan(a):                       # untuk menampilkan data
+    print('menampilkan data')
+    return data
+def hapus(nama):                        # untuk menghapus data berdasarkan nama
+    print('menghapus data', nama)
+    if nama in data.keys():
+        del data[nama]
+    return nama, 'sudah dihapus'
+def ubah(nama):                         # untuk mengubah data berdasarkan nama
+    print('mengubah data ', nama)
+    if data.keys():
+        del data[nama]
+        nama = input("Nama baru: ")
+        nilai = input('Nilai baru: ')
+    data[nama] = nilai
 
-
-print("Program Daftar Nilai")
-print("====================")
+print('Menambah data')
+print(tambah('Davin', 18))
+print(tambah('Ariel', 20))
+print(tambah('Dani', None))
 print()
 
-while True:
-    a = input("[(L)ihat, (T)ambah, (U)bah, (H)apus, (C)ari, (K)eluar] :")
-    if a=='T':
-        print('Tambah Data')
+print(tampilkan(data))
+print()
+
+print(ubah('Ariel'))
+print()
+
+print(hapus('Dani'))
+print()
+
+print('menampilkan data lagi')
+print()
+print(tampilkan(data))
