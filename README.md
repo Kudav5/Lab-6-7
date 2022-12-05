@@ -13,3 +13,7 @@ Pada script def, cetak nama dan nilai terserah
 Penjelasan Output
 1. Mengapa dibawah kalimat "Menambah data" hasilnya None? Karena di dalam def tambah() tidak ada return dan print hanya memasukkan parameter nama dan nilai kedalam variabel data
 2. Didalam data, Dani bernilai None karena nilainya None
+
+## Flowchart
+
+![flow](fotodef/fotoflow.jpg)
