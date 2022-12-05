@@ -4,7 +4,6 @@ data = {}
 def tambah(nama, nilai):                # untuk menambah data
     a = data[nama] = nilai
 def tampilkan(a):                       # untuk menampilkan data
-    print('menampilkan data')
     return data
 def hapus(nama):                        # untuk menghapus data berdasarkan nama
     print('menghapus data', nama)
@@ -25,6 +24,7 @@ print(tambah('Ariel', 20))
 print(tambah('Dani', None))
 print()
 
+print('menampilkan data')
 print(tampilkan(data))
 print()
 
@@ -35,5 +35,4 @@ print(hapus('Dani'))
 print()
 
 print('menampilkan data lagi')
-print()
 print(tampilkan(data))
